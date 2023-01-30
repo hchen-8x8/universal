@@ -29,5 +29,9 @@ export declare type MakeUniversalOpts = {
    * Minimatch pattern of binaries that are expected to be the same x64 binary in both of the ASAR files.
    */
   x64ArchFiles?: string;
+  /**
+   * Minimatch pattern of binaries that are excluded from being merged into fat binaries.
+   */
+  skipMergeFiles?: string;
 };
 export declare const makeUniversalApp: (opts: MakeUniversalOpts) => Promise<void>;
